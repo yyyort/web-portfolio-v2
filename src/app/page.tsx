@@ -1,4 +1,5 @@
 import About from "@/components/about";
+import Contact from "@/components/contact";
 import Experience from "@/components/experience";
 import Projects from "@/components/projects";
 import SectionLinks from "@/components/section-links";
@@ -53,13 +54,11 @@ export default function Home() {
       </section>
 
       {/* other contents */}
-      <section id="scroll-section" className="w-[70rem] p-10 overflow-auto">
-        <div className="backdrop-blur-sm p-10 rounded-[0.5rem] shadow-md">
-          <About />
-        </div>
-
+      <section id="scroll-section" className="z-10 w-[70rem] p-10 overflow-auto">
+        <About />
         <Experience />
         <Projects />
+        <Contact />
       </section>
     </div>
   );

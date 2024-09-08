@@ -1,4 +1,7 @@
-import { desc } from 'framer-motion/client'
+"use client"
+
+import { cn } from '@/lib/utils'
+import { motion } from 'framer-motion'
 import React from 'react'
 
 const projectsData = [
@@ -35,24 +38,30 @@ const projectsData = [
 ]
 
 export default function Projects() {
-  return (
-    <div id='projects'
-     className='flex flex-col justify-center min-h-full gap-4'>
-        {
-            projectsData.map((project, index) => (
-                <div key={index} className='flex flex-col gap-3'>
-                    <h2 className='text-2xl font-bold'>{project.title}</h2>
-                    <p className='text-[1.1rem]'>{project.description}</p>
-                    <div className='flex gap-3'>
-                        {
-                            project.techStack.map((tech, index) => (
-                                <span key={index} className='p-2 bg-gray-200 rounded-[0.4rem]'>{tech}</span>
-                            ))
-                        }
-                    </div>
-                </div>
-            ))
-        }
-    </div>
-  )
+    return (
+        <div id='projects'
+            className='flex flex-col justify-center min-h-full gap-4 pt-20'>
+            {
+                projectsData.map((project, index: number) => (
+                    <motion.div key={index} 
+                    className='sticky flex flex-col gap-3 bg-slate-50 backdrop-blur-sm p-10 rounded-[0.5rem] shadow-md border-t-[1px]'
+                    animate={{
+                        top: index * 10,
+                        zIndex: projectsData.length + index
+                    }}
+                    >
+                        <h2 className='text-2xl font-bold'>{project.title}</h2>
+                        <p className='text-[1.1rem]'>{project.description}</p>
+                        <div className='flex gap-3'>
+                            {
+                                project.techStack.map((tech, index) => (
+                                    <span key={index} className='p-2 bg-gray-200 rounded-[0.4rem]'>{tech}</span>
+                                ))
+                            }
+                        </div>
+                    </motion.div>
+                ))
+            }
+        </div>
+    )
 }

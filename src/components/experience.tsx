@@ -29,7 +29,7 @@ export default function Experience() {
          className='flex flex-col min-h-full justify-center gap-10'>
             {
                 experience.map((experience, index) => (
-                    <div key={index} className='flex flex-col gap-3'>
+                    <div key={index} className='flex flex-col gap-3 backdrop-blur-sm p-10 rounded-[0.5rem] shadow-xl'>
                         <h2 className='text-2xl font-bold'>{experience.title}</h2>
                         <div className='flex items-center justify-between'>
                             <h3 className='text-xl font-semibold'>{experience.company}</h3>

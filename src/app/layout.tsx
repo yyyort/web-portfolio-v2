@@ -30,7 +30,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <GridSmallBackground className="absolute -z-10 min-w-full"/>
+        <GridSmallBackground className="absolute min-w-full"/>
         {children}
       </body>
     </html>

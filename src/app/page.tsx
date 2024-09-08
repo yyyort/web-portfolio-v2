@@ -12,7 +12,7 @@ export default function Home() {
     <div className="flex justify-center gap-5 max-h-screen">
 
       {/* profile name, summary section */}
-      <section className="sticky flex-col w-[70rem] max-h-screen px-20 pt-10">
+      <section className="sticky top-0 w-[70rem] h-screen px-20 pt-10">
         <h1
           className="font-bold pb-8
           lg:text-6xl
@@ -53,7 +53,7 @@ export default function Home() {
       </section>
 
       {/* other contents */}
-      <section className="w-[70rem] overflow-auto p-10">
+      <section id="scroll-section" className="w-[70rem] p-10 overflow-auto">
         <div className="backdrop-blur-sm p-10 rounded-[0.5rem] shadow-md">
           <About />
         </div>

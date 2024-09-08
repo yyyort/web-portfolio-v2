@@ -25,7 +25,8 @@ const experience = [
 
 export default function Experience() {
     return (
-        <div className='flex flex-col min-h-full justify-center gap-10'>
+        <div id='experience'
+         className='flex flex-col min-h-full justify-center gap-10'>
             {
                 experience.map((experience, index) => (
                     <div key={index} className='flex flex-col gap-3'>

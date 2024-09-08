@@ -36,7 +36,8 @@ const projectsData = [
 
 export default function Projects() {
   return (
-    <div className='flex flex-col justify-center min-h-full gap-4'>
+    <div id='projects'
+     className='flex flex-col justify-center min-h-full gap-4'>
         {
             projectsData.map((project, index) => (
                 <div key={index} className='flex flex-col gap-3'>

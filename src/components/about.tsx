@@ -4,7 +4,9 @@ const aboutContent: String = ''
 
 export default function About() {
   return (
-    <section className='flex flex-col gap-3 text-[1.1rem] min-h-full justify-center'>
+    <section
+      id='about'
+     className='flex flex-col gap-3 text-[1.1rem] min-h-full justify-center'>
       <p>
         I am a fresh graduate from the University of San Agustin with a degree in Computer Science major in Game Development, and former Project Manager of Google Developer Student Club - USA.
       </p>

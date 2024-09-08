@@ -1,45 +1,76 @@
 "use client"
 
-import { url } from 'inspector'
+import { cn } from '@/lib/utils'
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { BsSlashLg } from 'react-icons/bs'
+import { TfiAngleLeft, TfiAngleRight } from 'react-icons/tfi'
 
 const link = [
     {
         section: 'About',
-        url: '/about'
+        url: '#about'
     },
     {
         section: 'Experience',
-        url: '/experience'
+        url: '#experience'
     },
     {
         section: 'Projects',
-        url: '/projects'
+        url: '#projects'
     },
     {
         section: 'Contact',
-        url: '/contact'
+        url: '#contact'
     }
 ]
 
 export default function SectionLinks() {
-  return (
-    <div className='flex flex-col gap-3 pb-10'>
-        {
-            link.map((link, index) => (
-                <div key={index} 
-                className='flex items-center px-2 border-r-2 border-l-2 border-transparent
-                lg:text-xl
-                hover:border-r-2 hover:border-l-2 hover:border-black
-                '
-                >
-                    <Link href={link.url}>
-                       {link.section}
-                    </Link>
-                </div>
-            ))
+    const [currentSection, setCurrentSection] = useState<string>('')
+
+    const handleScroll = () => {
+        const element = document.getElementById('scroll-section')
+        let scrollPosition = element?.scrollTop || 0
+
+        link.forEach(({ section, url }) => {
+            const sectionElement = document.querySelector(url)
+            if (sectionElement) {
+                const { offsetTop, offsetHeight } = sectionElement as HTMLElement;
+                if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+                    console.log(section)
+                    setCurrentSection(section)
+                }
+            }
+        })
+    }
+
+    useEffect(() => {
+        document.getElementById("scroll-section")?.addEventListener('scroll', handleScroll)
+
+        return () => {
+            document.getElementById("scroll-section")?.removeEventListener('scroll', handleScroll)
         }
-    </div>
-  )
+    }, [])
+
+    return (
+        <div className='flex flex-col gap-3 pb-10 scroll-smooth'>
+            {
+                link.map((link, index) => (
+                    <div key={index}
+                        className={cn(
+                            "flex items-center px-2 border-r-2 border-l-2 border-transparent lg:text-xl",)}
+                    >
+
+                        <Link href={link.url} className='flex items-center'>
+                            <TfiAngleLeft className={cn('hidden', link.section === currentSection ? 'block' : 'hidden')} />
+                            {link.section}
+                            <BsSlashLg className={cn('ml-5 -mr-1', link.section === currentSection ? 'block' : 'hidden')} />
+                            <TfiAngleRight className={cn('hidden', link.section === currentSection ? 'block' : 'hidden')} />
+                        </Link>
+
+                    </div>
+                ))
+            }
+        </div>
+    )
 }

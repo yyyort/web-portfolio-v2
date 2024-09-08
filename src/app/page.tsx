@@ -1,4 +1,5 @@
 import About from "@/components/about";
+import Experience from "@/components/experience";
 import SectionLinks from "@/components/section-links";
 import SocialLinks from "@/components/social-links";
 import TechStack from "@/components/tech-stack";
@@ -53,6 +54,7 @@ export default function Home() {
       {/* other contents */}
       <section className="w-[70rem] overflow-auto p-20">
           <About />
+          <Experience />
       </section>
     </div>
   );

@@ -4,9 +4,9 @@ const aboutContent: String = ''
 
 export default function About() {
   return (
-    <section className='flex flex-col gap-3 text-[1.1rem]'>
+    <section className='flex flex-col gap-3 text-[1.1rem] min-h-full justify-center'>
       <p>
-        I am a fresh graduate from the University of San Agustin with a degree in Computer Science, and former project manager of Google Student Developer Club - USA.
+        I am a fresh graduate from the University of San Agustin with a degree in Computer Science major in Game Development, and former Project Manager of Google Developer Student Club - USA.
       </p>
       <p>
       I am a jack of all trades and is eager to learn and try anything that interests me in tech, from Web, Mobile, Game, and AI. Currently, I mainly focus on Full Stack Development, I use React, and NextJs for my Front End, Node and ExpressJS for the Back End, and I use either PostgreSQL for SQL Database or MongoDB for NoSQL.

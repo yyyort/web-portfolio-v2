@@ -4,12 +4,13 @@ import SocialLinks from "@/components/social-links";
 import TechStack from "@/components/tech-stack";
 const heads = ['FullStack Developer', 'Cross-platform Developer', 'Computer Science Graduate']
 
+const summary = 'A jack of all trades developer who loves to learn new technologies and build stuffs'
 export default function Home() {
   return (
     <div className="flex justify-center gap-5 max-h-screen">
 
       {/* profile name, summary section */}
-      <section className="sticky flex-col max-h-screen px-20 pt-10">
+      <section className="sticky flex-col w-[70rem] max-h-screen px-20 pt-10">
         <h1 
           className="font-bold pb-8
           lg:text-6xl
@@ -35,7 +36,9 @@ export default function Home() {
             ))  
           }
         </div>
-        <p className="lg:text-[1.3rem] pt-5 pb-16">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui voluptatum repellendus pariatur optio hic sunt, vero ea provident esse facilis?</p>
+        <p className="lg:text-[1.2rem] pt-5 pb-16">
+          {summary}
+        </p>
       
         {/*links section*/}
         <SectionLinks />
@@ -48,9 +51,7 @@ export default function Home() {
       </section>
 
       {/* other contents */}
-      <section className="w-[70rem] overflow-auto p-20">sticky 
-          <About />
-          <About />
+      <section className="w-[70rem] overflow-auto p-20">
           <About />
       </section>
     </div>

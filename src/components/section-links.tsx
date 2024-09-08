@@ -10,6 +10,10 @@ const link = [
         url: '/about'
     },
     {
+        section: 'Experience',
+        url: '/experience'
+    },
+    {
         section: 'Projects',
         url: '/projects'
     },

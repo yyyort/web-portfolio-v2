@@ -1,5 +1,6 @@
 import About from "@/components/about";
 import Experience from "@/components/experience";
+import Projects from "@/components/projects";
 import SectionLinks from "@/components/section-links";
 import SocialLinks from "@/components/social-links";
 import TechStack from "@/components/tech-stack";
@@ -12,35 +13,35 @@ export default function Home() {
 
       {/* profile name, summary section */}
       <section className="sticky flex-col w-[70rem] max-h-screen px-20 pt-10">
-        <h1 
+        <h1
           className="font-bold pb-8
           lg:text-6xl
           md:text-5xl
           "
         >Ian Troy Pahilga</h1>
-        <div className="flex">  
+        <div className="flex">
           {
             heads.map((head, index) => (
-             <div key={index} 
-              className="flex mr-5 font-semibold
+              <div key={index}
+                className="flex mr-5 font-semibold
               lg:text-xl
               "
               >
-               <h2>{head}</h2>
-               {/* line to seperate */}
+                <h2>{head}</h2>
+                {/* line to seperate */}
                 {
                   index < heads.length - 1 && (
                     <div className="w-1 h-full bg-black"></div>
                   )
                 }
               </div>
-            ))  
+            ))
           }
         </div>
         <p className="lg:text-[1.2rem] pt-5 pb-16">
           {summary}
         </p>
-      
+
         {/*links section*/}
         <SectionLinks />
 
@@ -52,9 +53,13 @@ export default function Home() {
       </section>
 
       {/* other contents */}
-      <section className="w-[70rem] overflow-auto p-20">
+      <section className="w-[70rem] overflow-auto p-10">
+        <div className="backdrop-blur-sm p-10 rounded-[0.5rem] shadow-md">
           <About />
-          <Experience />
+        </div>
+
+        <Experience />
+        <Projects />
       </section>
     </div>
   );

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { Grid } from "lucide-react";
+import { GridSmallBackground } from "@/components/ui/grid-small-bg";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -28,6 +30,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <GridSmallBackground className="absolute -z-10 min-w-full"/>
         {children}
       </body>
     </html>

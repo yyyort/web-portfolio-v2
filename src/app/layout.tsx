@@ -4,6 +4,7 @@ import "./globals.css";
 import { Grid } from "lucide-react";
 import { GridSmallBackground } from "@/components/ui/grid-small-bg";
 import { Toaster } from "@/components/ui/toaster";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -17,7 +18,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Ian Troy Portfolio",  
+  title: "Ian Troy Portfolio",
   description: "Ian Troy Pahilga web developer portfolio",
 };
 
@@ -27,12 +28,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <GridSmallBackground className="absolute min-w-full"/>
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem={true}
+        >
+          <GridSmallBackground className="fixed min-w-full h-[100vh]" />
+          {children}
+        </ThemeProvider>
+
         <Toaster />
       </body>
     </html>

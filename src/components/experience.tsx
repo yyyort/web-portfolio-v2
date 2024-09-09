@@ -30,9 +30,11 @@ export default function Experience() {
             <h1 className='text-2xl font-bold px-3 ml-auto pb-2 pt-5'>Experience</h1>
             {
                 experience.map((experience, index) => (
-                    <div key={index} className='flex flex-col gap-3 backdrop-blur-sm rounded-[0.5rem] shadow-xl 
-                    lg:p-10 lg:mb-4
-                    mobile_s:p-5 mobile_s:mb-4 
+                    <div key={index} className='flex flex-col gap-3 backdrop-blur-[1.5px] rounded-[0.5rem] shadow-dark_shadow
+                    lg:p-10 lg:mb-6
+                    mobile_s:p-5 mobile_s:mb-4
+                    dark:shadow-dark_shadow
+                    
                     '>
                         <h2 className='font-bold
                             lg:text-2xl

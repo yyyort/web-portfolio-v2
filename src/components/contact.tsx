@@ -72,7 +72,7 @@ export default function Contact() {
                 lg:text-lg
                 mobile_s:text-base
                 '>Name</FormLabel>
-                <FormControl className='border-slate-300 border-2
+                <FormControl className='border-slate-300 border-2 rounded-md
                 lg:p-2
                 mobile_s:p-1  
                 '>
@@ -92,7 +92,7 @@ export default function Contact() {
               mobile_s:w-[70%]
               '>
                 <FormLabel htmlFor='email' className='lg:text-lg mobile_s:text-base'>Email</FormLabel>
-                <FormControl className='lg:p-2 mobile_s:p-1 border-slate-300 border-2'>
+                <FormControl className='lg:p-2 mobile_s:p-1 border-slate-300 border-2 rounded-md'>
                   <input {...field} />
                 </FormControl>
                 <FormMessage/>
@@ -106,7 +106,7 @@ export default function Contact() {
             render={({ field }) => (
               <FormItem className='flex flex-col w-1/2'>
                 <FormLabel htmlFor='message' className='text-lg'>Message</FormLabel>
-                <FormControl className='p-2 h-52 xl:w-[40rem] border-slate-300 border-2
+                <FormControl className='p-2 h-52 xl:w-[36rem] border-slate-300 border-2 rounded-md
                 mobile_s:w-[94vw]
                 '>
                   <textarea {...field}/>

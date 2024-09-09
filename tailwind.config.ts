@@ -26,6 +26,10 @@ const config = {
   		}
   	},
   	extend: {
+		boxShadow: {
+			dark_shadow: '3px 3px 8px 1px rgb(128, 203, 196)',
+			/* teal shadow */
+		},
 		screens: {
 			mobile_s: '320px',
 			mobile_m: '375px',

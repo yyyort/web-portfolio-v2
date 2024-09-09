@@ -5,6 +5,7 @@ import Projects from "@/components/projects";
 import SectionLinks from "@/components/section-links";
 import SocialLinks from "@/components/social-links";
 import TechStack from "@/components/tech-stack";
+import { ModeToggle } from "@/components/ui/theme-toggle";
 const heads = ['FullStack Developer', 'Cross-platform Developer', 'Computer Science Graduate']
 
 const summary = 'A jack of all trades developer who loves to learn new technologies and build stuffs'
@@ -48,6 +49,7 @@ export default function Home() {
                     lg:mx-5
                     md:mx-3
                     mobile_s:mx-2
+                    dark:bg-white
                     "></div>
                   )
                 }
@@ -65,8 +67,8 @@ export default function Home() {
         </p>
 
         {/*links section*/}
-        <SectionLinks 
-        className="
+        <SectionLinks
+          className="
         xl:block
         mobile_s:hidden
         "
@@ -75,8 +77,12 @@ export default function Home() {
         {/* tech stacks */}
         <TechStack />
 
-        {/* social links */}
-        <SocialLinks />
+        <div className="flex items-center justify-between">
+          {/* social links */}
+          <SocialLinks />
+          <ModeToggle />
+        </div>
+
       </section>
 
       {/* other contents */}

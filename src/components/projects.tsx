@@ -46,18 +46,16 @@ export default function Projects() {
             {
                 projectsData.map((project, index: number) => (
                     <motion.div key={index} 
-                    className='sticky flex flex-col gap-3 bg-slate-50 backdrop-blur-sm rounded-[0.5rem] shadow-md
+                    className='sticky flex flex-col gap-3 backdrop-blur-lg bg-slate-50 rounded-[0.5rem] shadow-md 
                     border-b-2 border-slate-300
                     lg:p-10
                     mobile_s:p-4
+                  dark:text-white dark:bg-[#090a0bb6]
+                    dark:border-[#090a0bb6] dark:border-b-2
+                    hover:shadow-dark_shadow
                     '
-                    /* q: why does it not stick when it is in mobile screen?
-                        a: because the parent container is not tall enough to make it sticky
-                        q: how to fix it?
-                        a: add a min-height to the parent container
-                        */
                     animate={{
-                        borderTopColor: `hsl(0, 0%, ${100 - index * 20}%)`,
+                        borderTopColor: `dark:hsl(0, 0%, ${0 + index * 20}%) hsl(0, 0%,${100 - index * 20}%)`,
                         borderTopWidth: 1 + index * 0.1,
                         top: 35 + index * 10,
                         zIndex: projectsData.length + index
@@ -74,9 +72,10 @@ export default function Projects() {
                         <div className='flex gap-3 flex-wrap'>
                             {
                                 project.techStack.map((tech, index) => (
-                                    <span key={index} className='bg-gray-200 rounded-[0.4rem] max-h-[2rem] text-nowrap
+                                    <span key={index} className='flex items-center bg-gray-200 rounded-[0.4rem] max-h-[2rem] text-nowrap text-center
                                     lg:p-2 lg:text-base
                                     mobile_s:p-1 mobile_s:text-xs
+                                    dark:bg-slate-400 dark:text-white
                                     '>{tech}</span>
                                 ))
                             }

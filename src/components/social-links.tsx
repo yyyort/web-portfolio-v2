@@ -22,7 +22,7 @@ export default function SocialLinks() {
     <div className='flex'>
         {
             social.map((social, index) => (
-                <div key={index} className='pr-5 text-2xl'>
+                <div key={index} className='pr-5 text-2xl dark:hover:text-teal-300 drop-shadow-md'>
                     <Link href={social.url} target='_blank'>
                         {social.icon}
                     </Link>

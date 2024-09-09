@@ -37,7 +37,6 @@ export default function SectionLinks() {
             if (sectionElement) {
                 const { offsetTop, offsetHeight } = sectionElement as HTMLElement;
                 if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-                    console.log(section)
                     setCurrentSection(section)
                 }
             }

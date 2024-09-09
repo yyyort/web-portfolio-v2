@@ -8,7 +8,7 @@ const social = [
         icon: <FaGithub />,
     },
     {
-        url: 'www.linkedin.com/in/ian-troy-pahilga',
+        url: 'https://linkedin.com/in/ian-troy-pahilga',
         icon: <FaLinkedin />,
     },
     {
@@ -23,7 +23,7 @@ export default function SocialLinks() {
         {
             social.map((social, index) => (
                 <div key={index} className='pr-5 text-2xl'>
-                    <Link href={social.url}>
+                    <Link href={social.url} target='_blank'>
                         {social.icon}
                     </Link>
                 </div>

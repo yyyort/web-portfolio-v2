@@ -33,10 +33,14 @@ export default function SocialLinks() {
                     </div>
                 ))
             }
-            <Button className='
-        hover:bg-gradient-to-tr from-teal-700 to-cyan-600
-        hover:dark:bg-gradient-to-tr dark:from-teal-800 dark:to-teal-400
-        '>Resume</Button>
+
+            <a href='/public/Ian-Troy-Pahilga-Resume.pdf' download={'/public/Ian-Troy-Pahilga-Resume.pdf'}>
+                <Button className='
+                    hover:bg-gradient-to-tr from-teal-700 to-cyan-600
+                    hover:dark:bg-gradient-to-tr dark:from-teal-800 dark:to-teal-400
+                    '>Resume</Button>
+            </a>
+
         </div>
     )
 }

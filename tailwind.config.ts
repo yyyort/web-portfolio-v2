@@ -19,13 +19,18 @@ const config = {
   prefix: "",
   theme: {
   	container: {
-  		center: 'true',
+  		center: true,
   		padding: '2rem',
   		screens: {
   			'2xl': '1400px'
   		}
   	},
   	extend: {
+		screens: {
+			mobile_s: '320px',
+			mobile_m: '375px',
+			mobile_l: '425px',
+		},
   		colors: {
   			border: 'hsl(var(--border))',
   			input: 'hsl(var(--input))',

@@ -25,7 +25,9 @@ const link = [
     }
 ]
 
-export default function SectionLinks() {
+export default function SectionLinks(
+    { className }: { className?: string }
+) {
     const [currentSection, setCurrentSection] = useState<string>('')
 
     const handleScroll = () => {
@@ -52,7 +54,7 @@ export default function SectionLinks() {
     }, [])
 
     return (
-        <div className='flex flex-col gap-3 pb-10 scroll-smooth'>
+        <div className={`flex flex-col gap-3 pb-10 scroll-smooth ${className}`}>
             {
                 link.map((link, index) => (
                     <div key={index}

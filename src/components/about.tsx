@@ -6,7 +6,7 @@ export default function About() {
   return (
     <section
       id='about'
-     className='flex flex-col gap-3 text-[1.1rem] min-h-full justify-center backdrop-blur-3xl p-10 rounded-[0.5rem] shadow-xl'>
+     className='flex flex-col gap-3 text-[1.1rem] justify-center backdrop-blur-3xl p-12 mt-7 mb-14 rounded-[0.5rem] shadow-xl'>
       <p>
         I am a fresh graduate from the University of San Agustin with a degree in Computer Science major in Game Development, and former Project Manager of Google Developer Student Club - USA.
       </p>

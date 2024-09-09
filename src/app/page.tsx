@@ -10,41 +10,67 @@ const heads = ['FullStack Developer', 'Cross-platform Developer', 'Computer Scie
 const summary = 'A jack of all trades developer who loves to learn new technologies and build stuffs'
 export default function Home() {
   return (
-    <div className="flex justify-center gap-5 max-h-screen">
+    <div className="
+    xl:flex xl:flex-row xl:justify-center xl:gap-5 xl:max-h-screen
+    mobile_s:flex mobile_s:flex-col mobile_s:justify-center mobile_s:gap-5 mobile_s:max-w-screen mobile_s:overflow-hidden
+    ">
 
       {/* profile name, summary section */}
-      <section className="sticky top-0 w-[70rem] h-screen px-20 pt-10">
+      <section className="z-10
+      xl:sticky xl:top-0 xl:w-[50vw] xl:h-screen xl:px-20 xl:pt-10'
+      lg:w-[70rem] lg:pt-10 lg:px-20
+      md:px-14 md:pt-5
+      mobile_s:flex mobile_s:flex-col mobile_s:justify-center mobile_s:p-5
+      ">
         <h1
-          className="font-bold pb-8
-          lg:text-6xl
+          className="font-bold
+          lg:text-6xl lg:pb-8
           md:text-5xl
+          mobile_s:text-3xl mobile_s:pb-5
           "
         >Ian Troy Pahilga</h1>
+
+        {/* headlines */}
         <div className="flex">
           {
             heads.map((head, index) => (
               <div key={index}
-                className="flex mr-5 font-semibold
-              lg:text-xl
+                className="flex font-semibold
+              md:text-xl
+              mobile_s:text-sm
               "
               >
                 <h2>{head}</h2>
                 {/* line to seperate */}
                 {
                   index < heads.length - 1 && (
-                    <div className="w-1 h-full bg-black"></div>
+                    <div className="w-[0.1rem] h-full bg-black 
+                    lg:mx-5
+                    md:mx-3
+                    mobile_s:mx-2
+                    "></div>
                   )
                 }
               </div>
             ))
           }
         </div>
-        <p className="lg:text-[1.2rem] pt-5 pb-16">
+
+        {/* summary */}
+        <p className="max-w-fit
+        md:text-lg
+        mobile_s:text-base mobile_s:pt-5 mobile_s:pb-5
+        ">
           {summary}
         </p>
 
         {/*links section*/}
-        <SectionLinks />
+        <SectionLinks 
+        className="
+        xl:block
+        mobile_s:hidden
+        "
+        />
 
         {/* tech stacks */}
         <TechStack />
@@ -54,7 +80,10 @@ export default function Home() {
       </section>
 
       {/* other contents */}
-      <section id="scroll-section" className="z-10 w-[70rem] p-10 overflow-auto">
+      <section id="scroll-section" className="
+      z-10 overflow-auto min-h-full
+      xl:w-[50vw] xl:overflow-auto xl:px-20 xl:py-14
+      ">
         <About />
         <Experience />
         <Projects />

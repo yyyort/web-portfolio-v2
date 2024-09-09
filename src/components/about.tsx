@@ -1,7 +1,5 @@
 import React from 'react'
 
-const aboutContent: String = ''
-
 export default function About() {
   return (
     <section

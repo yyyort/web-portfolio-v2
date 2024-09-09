@@ -32,7 +32,7 @@ export default function SectionLinks(
 
     const handleScroll = () => {
         const element = document.getElementById('scroll-section')
-        let scrollPosition = element?.scrollTop || 0
+        const scrollPosition = element?.scrollTop || 0
 
         link.forEach(({ section, url }) => {
             const sectionElement = document.querySelector(url)

@@ -3,7 +3,6 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { z } from 'zod'
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from './ui/form'
 import { Button } from './ui/button'
 import { useToast } from '@/hooks/use-toast'
@@ -41,15 +40,13 @@ export default function Contact() {
           title: 'Success',
           description: 'Message sent',
         })
-        const response = await res.json();
-        console.log(response);
       }
-    } catch (error: any) {
-      console.error(error);
+    } catch (error: unknown) {
+
       toast({
         variant: 'destructive',
         title: 'Error',
-        description: error,
+        description: error as React.ReactNode,
       })
     }
 
@@ -115,7 +112,8 @@ export default function Contact() {
               </FormItem>
             )}
           />
-          <Button type='submit' className={cn('w-24 p-6 text-lg ml-auto mr-2', form.formState.isSubmitting === true ? 'bg-slate-600 cursor-not-allowed' : '')} disabled={
+          
+          <Button type='submit' className={cn('w-24 p-6 text-lg ml-auto mr-2 hover:bg-gradient-to-tr from-teal-700 to-cyan-600 hover:dark:bg-gradient-to-tr dark:from-teal-800 dark:to-teal-400', form.formState.isSubmitting === true ? 'bg-slate-600 cursor-not-allowed' : '')} disabled={
             form.formState.isSubmitting
           }>Submit</Button>
         </form>

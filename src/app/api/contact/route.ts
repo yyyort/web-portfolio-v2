@@ -33,10 +33,8 @@ export async function POST(req: NextRequest) {
     if (data.success) {
         try {
             await sendContact(data.data);
-    
             return NextResponse.json({ message: 'Message sent' });
-        } catch (error: any) {
-            console.error(error);  
+        } catch (error: unknown) {
             return NextResponse.error();
         }
     } else {

@@ -32,13 +32,15 @@ const stack = [
             "Javascript",
             "Typescript",
             "Python",
-            "Dart"
+            "Dart",
+            "C#"
         ]
     },
     {
         "tools": [
             "Git",
             "Docker",
+            "linux",
             "Figma",
         ]
     }
@@ -60,7 +62,7 @@ export default function TechStack() {
                     '>{Object.keys(stack)}</h2>
                     <ul>
                         {
-                            Object.values(stack).map((value, index) => (
+                            Object.values(stack).map((value) => (
                                 value.map((tech: string, index:number) => (
                                     <li key={index} className='
                                     mobile_s:text-sm

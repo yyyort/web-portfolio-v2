@@ -83,6 +83,7 @@ export default function Home() {
       <section id="scroll-section" className="
       z-10 overflow-auto min-h-full
       xl:w-[50vw] xl:overflow-auto xl:px-20 xl:py-14
+      mobile_s:p-3 mobile_s:w-full mobile_s:overflow-hidden
       ">
         <About />
         <Experience />

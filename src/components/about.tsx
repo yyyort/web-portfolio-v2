@@ -7,7 +7,7 @@ export default function About() {
     <section
       id='about'
      className='
-     flex flex-col justify-center backdrop-blur-[1.5px] rounded-[0.5rem] shadow-dark_shadow
+     flex flex-col justify-center backdrop-blur-[1.5px] rounded-[0.5rem] shadow-light_shadow
      xl:p-12 xl:mt-7 xl:mb-14 xl:gap-3 xl:text-[1.1rem]
      mobile_s:p-5 mobile_s:mb-7 mobile_s:gap-2 mobile_s:text-base
      dark:shadow-dark_shadow

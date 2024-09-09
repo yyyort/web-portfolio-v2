@@ -62,8 +62,10 @@ export default function SectionLinks(
                             "flex items-center px-2 border-r-2 border-l-2 border-transparent lg:text-xl",)}
                     >
 
-                        <Link href={link.url} className={cn('flex items-center hover:text-teal-300', link.section === currentSection && 'dark:text-teal-300')}>
-                            <TfiAngleLeft className={cn('hidden', link.section === currentSection ? 'block' : 'hidden')} />
+                        <Link href={link.url} className={cn('flex items-center hover:text-[#005F73]', link.section === currentSection && 'dark:text-teal-300 text-teal-900 font-semibold')}>
+                            <TfiAngleLeft className={cn(
+                                'hidden',
+                                link.section === currentSection ? 'block' : 'hidden')} />
                             {link.section}
                             <BsSlashLg className={cn('ml-5 -mr-1', link.section === currentSection ? 'block' : 'hidden')} />
                             <TfiAngleRight className={cn('hidden', link.section === currentSection ? 'block' : 'hidden')} />

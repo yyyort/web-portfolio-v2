@@ -28,8 +28,8 @@ const projectsData = [
     },
     {
         title: 'Personal Portfolio',
-        description: 'Developed my personal portfolio using NextJS and TailwindCSS',
-        techStack: ['React', 'NextJS', 'TailwindCSS', 'Framer Motion', 'Shadcn/UI', 'Aceternity/UI']
+        description: 'Personal Developer Portfolio created using NextJS',
+        techStack: ['React', 'NextJS', 'Shadcn/UI', 'Aceternity/UI']
     },
     {
         title: 'Personatask',
@@ -52,7 +52,8 @@ export default function Projects() {
                     mobile_s:p-4
                   dark:text-white dark:bg-[#090a0bb6]
                     dark:border-[#090a0bb6] dark:border-b-2
-                    hover:shadow-dark_shadow
+                    hover:shadow-light_shadow
+                    hover:dark:shadow-dark_shadow
                     '
                     animate={{
                         borderTopColor: `dark:hsl(0, 0%, ${0 + index * 20}%) hsl(0, 0%,${100 - index * 20}%)`,

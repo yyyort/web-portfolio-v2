@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 import { FaGithub, FaLinkedin, FaFacebook } from 'react-icons/fa'
+import { Button } from './ui/button'
 
 const social = [
     {
@@ -18,17 +19,24 @@ const social = [
 ]
 
 export default function SocialLinks() {
-  return (
-    <div className='flex'>
-        {
-            social.map((social, index) => (
-                <div key={index} className='pr-5 text-2xl dark:hover:text-teal-300 drop-shadow-md'>
-                    <Link href={social.url} target='_blank'>
-                        {social.icon}
-                    </Link>
-                </div>
-            ))
-        }
-    </div>
-  )
+    return (
+        <div className='flex items-center'>
+            {
+                social.map((social, index) => (
+                    <div key={index} className='pr-5 text-2xl
+                    hover:text-teal-800
+                    hover:dark:text-teal-400
+                '>
+                        <Link href={social.url} target='_blank'>
+                            {social.icon}
+                        </Link>
+                    </div>
+                ))
+            }
+            <Button className='
+        hover:bg-gradient-to-tr from-teal-700 to-cyan-600
+        hover:dark:bg-gradient-to-tr dark:from-teal-800 dark:to-teal-400
+        '>Resume</Button>
+        </div>
+    )
 }

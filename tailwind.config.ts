@@ -28,6 +28,7 @@ const config = {
   	extend: {
 		boxShadow: {
 			dark_shadow: '3px 3px 8px 1px rgb(128, 203, 196)',
+			light_shadow: '3px 3px 8px 1px rgb(0, 95, 115)'
 			/* teal shadow */
 		},
 		screens: {

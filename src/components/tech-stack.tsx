@@ -4,12 +4,14 @@ const stack = [
     {
         "front end": [
             "React",
-            "Next.js",
+            "NextJs",
+            "Vue",
+            "NuxtJs"
         ]
     },
     {
         "back end": [
-            "Node.js",
+            "NodeJs",
             "Express",
             "Firebase",
         ]

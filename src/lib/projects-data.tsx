@@ -125,7 +125,7 @@ export const projectsData: projectType[] = [
       images: [port1, port2],
       title: "Personal Developer Portfolio",
       fullDescription: [
-        "My personal web portfolio that I have created using NextJs, along side using shadcnUI, and aceternityUI for UI components, and nodemailer for email automation and sending API",
+        "",
       ],
     },
     company: "Codebility",
@@ -133,7 +133,7 @@ export const projectsData: projectType[] = [
   },
   {
     title: "Codebility Portal",
-    description: "Personal Developer Portfolio created using NextJS",
+    description: "Codebility Portal is a platform for Codevs to showcase their projects and skills, clients to find the right developer for their projects, and for the community to learn and grow together.",
     techStack: ["React", "NextJS", "Shadcn/UI", "Supabase"],
     github: null,
     link: {
@@ -145,7 +145,7 @@ export const projectsData: projectType[] = [
       images: [port1, port2],
       title: "Personal Developer Portfolio",
       fullDescription: [
-        "My personal web portfolio that I have created using NextJs, along side using shadcnUI, and aceternityUI for UI components, and nodemailer for email automation and sending API",
+        "",
       ],
     },
     company: "Codebility",

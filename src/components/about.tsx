@@ -14,7 +14,7 @@ export default function About() {
       mobile_s:block
       '>About</h1>
       <p>
-        I am a fresh graduate from the University of San Agustin with a degree in Computer Science major in Game Development, and former Project Manager of Google Developer Student Club - USA.
+        I am a fresh graduate from the University of San Agustin with a degree in Computer Science major in Game Developments.
       </p>
       <p>
       I am a jack of all trades and is eager to learn and try anything that interests me in tech, from Web, Mobile, Game, and AI. Currently, I mainly focus on Full Stack Development, I use React, and NextJs for my Front End, Node and ExpressJS for the Back End, and I use either PostgreSQL for SQL Database or MongoDB for NoSQL.

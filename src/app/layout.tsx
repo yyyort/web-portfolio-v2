@@ -29,14 +29,14 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden overflow-y-auto`}
       >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem={true}
         >
-          <GridSmallBackground className="fixed min-w-full h-[100vh]" />
+          <GridSmallBackground className="fixed min-w-full w-full h-[100vh] overflow-hidden" />
           {children}
         </ThemeProvider>
 

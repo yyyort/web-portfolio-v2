@@ -16,7 +16,7 @@ const experience: experienceType[] = [
     company: "Codebility",
     date: "Oct 2024 - current",
     accomplishment: [
-      "Codeveloped TaskBuddy mobile app with using React Native and Firebase",
+      "Codeveloped TaskBuddy mobile app using React Native and Firebase",
       "Contributted to the development of Codebility's website using NextJS and Supabase",
     ],
   },

@@ -15,6 +15,7 @@ import {
 import SayolongDialog from "./project/project-dialog";
 import { projectsData } from "@/lib/projects-data";
 import { Link2 } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 export default function Projects() {
   return (
@@ -24,18 +25,21 @@ export default function Projects() {
     >
       <h1 className="sticky top-0 text-2xl font-bold ml-2">Projects</h1>
       {projectsData.map((project, index: number) => (
-        <Dialog key={index}>
+        <Dialog key={index} open={project.private ? false : undefined}>
           <DialogTrigger asChild>
             <motion.div
               key={index}
-              className="sticky flex flex-col gap-3 backdrop-blur-xl rounded-[0.5rem] shadow-md cursor-pointer
+              className={cn(
+                `sticky flex flex-col gap-3 backdrop-blur-xl rounded-[0.5rem] shadow-md cursor-pointer
                     lg:p-10
                     mobile_s:p-4
                     bg-gradient-to-tr from-[#dae1e9] to-[#9dcbccc9]
                   dark:text-white dark:bg-gradient-to-tl dark:from-[#28333e] dark:to-[#0a1b23]
                     hover:shadow-light_shadow
                     hover:dark:shadow-dark_shadow
-                    "
+                    `,
+                project.private && "cursor-default"
+              )}
               animate={{
                 borderTopColor: `hsl(0, 0%,${0 + index * 20}%)`,
                 borderTopWidth: 1 + index * 0.1,
@@ -43,14 +47,28 @@ export default function Projects() {
                 zIndex: projectsData.length + index,
               }}
             >
-              <h2
-                className="font-bold
+              <div className="flex items-center justify-between text-end">
+                <h2
+                  className="font-bold
                         lg:text-2xl
                         mobile_s:text-lg
                         "
-              >
-                {project.title}
-              </h2>
+                >
+                  {project.title}
+                </h2>
+
+                {project.personal && (
+                  <p className="font-medium">Personal Project</p>
+                )}
+
+                {project.company && (
+                  <div>
+                    <p className="font-medium">{project.company}</p>
+                    <p className="font-light text-xs">{project.role}</p>
+                  </div>
+                )}
+              </div>
+
               <p
                 className="
                         lg:text-[1.1rem]
@@ -88,12 +106,18 @@ export default function Projects() {
                   {project.link && (
                     <Link href={project.link.href} target="_blank">
                       <Button variant="ghost" className="flex gap-1">
-                        <Link2/>
+                        <Link2 />
                         <p>{project.link.name}</p>
                       </Button>
                     </Link>
                   )}
                 </div>
+
+                {project.title === "Taskbuddy" && (
+                  <div>
+                    <p className="text-xs font-extralight">Still in development and private</p>
+                  </div>
+                )}
               </div>
             </motion.div>
           </DialogTrigger>
@@ -107,9 +131,7 @@ export default function Projects() {
             <div className="overflow-auto">
               <SayolongDialog project={project} />
             </div>
-            <DialogDescription>
-              
-            </DialogDescription>
+            <DialogDescription></DialogDescription>
           </DialogContent>
         </Dialog>
       ))}
